@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <template encoding-version="1.0">
-  <description></description>
+  <description>Reusable template for media files metadata extraction</description>
   <groupId>50640292-015c-1000-29f0-0adcf8664f59</groupId>
-  <name>media-ingest</name>
+  <name>media-metadata-extraction</name>
   <snippet>
     <connections>
       <id>44bc1d3a-1c83-1365-0000-000000000000</id>
@@ -304,9 +304,9 @@
         <x>329.29904178783</x>
         <y>0.0</y>
       </position>
-      <comments></comments>
+      <comments>Input media files to extract metadata from them</comments>
       <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-      <name>ingest-media</name>
+      <name>input-media</name>
       <state>STOPPED</state>
       <transmitting>false</transmitting>
       <type>INPUT_PORT</type>
@@ -1378,5 +1378,5 @@ if (flowFile != None):
       <type>org.apache.nifi.processors.standard.ReplaceText</type>
     </processors>
   </snippet>
-  <timestamp>06/27/2017 16:21:09 UTC</timestamp>
+  <timestamp>06/29/2017 09:45:50 UTC</timestamp>
 </template>
