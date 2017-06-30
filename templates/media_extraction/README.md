@@ -8,9 +8,6 @@ The flow is:
 - create a feed using "Media Ingest" template to extract the metadata +/- content and save the results as JSON files. (the content can be saved in several ways. Check below)
 - create a feed using standard "Data Ingest" template to load the media file metadata +/- content into Hive
 
-## TODO
-- maybe rename media ingest template to media metadata extraction template, as it's not really ingesting the data in Hive at that point
-
 ## Templates
 
 ### Media metadata extraction reusable template
@@ -24,15 +21,15 @@ The content can be:
 - don't save
 
 Installation:
- - In kylo, import template from file -> select file and select reusable + overwrite.
+ - In Kylo UI -> import template from file -> select file and select reusable + overwrite.
 
 ### Media metadata extraction for the feed template
-Feed template.
+File feed template.
 
 File `Media_Metadata_Extraction.xml`
 
 Installation:
- - In kylo, import template from Nifi environment -> select fields
+ - In Kylo UI -> import template from Nifi environment -> select fields. ** UNSELECT SKIP HEADER or you will lose the first row from the JSON file** 
 
 For the save content setting, you can give the following selectable options (or have a hardcoded default):
 - "In file"
@@ -40,3 +37,4 @@ For the save content setting, you can give the following selectable options (or 
 - "Don't save"
 
 ### Testing with feeds
+Check [the test doc](../../test/media_extraction/README.md)
