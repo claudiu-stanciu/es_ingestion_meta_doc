@@ -10,10 +10,10 @@ The flow is:
 
 ## Templates
 
-### Media ingest reusable template
-Reusable template to extract metadata from a media file.
+### Media metadata extraction reusable template
+Reusable template to extract metadata from a media file, and export the result in JSON format. It will also try to merge from several files, to generate fewer big files to be ingested.
 
-File: `media-ingest.xml`
+File: `media-metadata-extraction.xml`
 
 The content can be:
 - saved in the file
@@ -21,15 +21,20 @@ The content can be:
 - don't save
 
 Installation:
- - In kylo, import template from file -> select file and select reusable + overwrite.
+ - In Kylo UI -> import template from file -> select file and select reusable + overwrite.
 
-### Media ingest for the feed template
-File `Media_Ingest.xml`
+### Media metadata extraction for the feed template
+File feed template.
+
+File `Media_Metadata_Extraction.xml`
 
 Installation:
- - In kylo, import template from Nifi environment -> select fields
+ - In Kylo UI -> import template from Nifi environment -> select fields. ** UNSELECT SKIP HEADER or you will lose the first row from the JSON file** 
 
 For the save content setting, you can give the following selectable options (or have a hardcoded default):
 - "In file"
 - "In HDFS"
 - "Don't save"
+
+### Testing with feeds
+Check [the test doc](../../test/media_extraction/README.md)

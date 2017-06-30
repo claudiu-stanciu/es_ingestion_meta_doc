@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <template encoding-version="1.0">
-  <description></description>
+  <description>Reusable template for media files metadata extraction</description>
   <groupId>50640292-015c-1000-29f0-0adcf8664f59</groupId>
-  <name>media-ingest</name>
+  <name>media-metadata-extraction</name>
   <snippet>
     <connections>
       <id>44bc1d3a-1c83-1365-0000-000000000000</id>
@@ -304,9 +304,9 @@
         <x>329.29904178783</x>
         <y>0.0</y>
       </position>
-      <comments></comments>
+      <comments>Input media files to extract metadata from them</comments>
       <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-      <name>ingest-media</name>
+      <name>input-media</name>
       <state>STOPPED</state>
       <transmitting>false</transmitting>
       <type>INPUT_PORT</type>
@@ -507,7 +507,7 @@
       <parentGroupId>50640292-015c-1000-0000-000000000000</parentGroupId>
       <position>
         <x>616.8492506926764</x>
-        <y>555.8328168232119</y>
+        <y>555.832816823212</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -812,11 +812,11 @@ session.transfer(flowFile, REL_SUCCESS)</value>
         <properties>
           <entry>
             <key>Max Number of Attributes</key>
-            <value>100</value>
+            <value>1000</value>
           </entry>
           <entry>
             <key>Max Attribute Length</key>
-            <value>100</value>
+            <value>100000</value>
           </entry>
           <entry>
             <key>Metadata Key Filter</key>
@@ -1011,7 +1011,7 @@ if (flowFile != None):
       <parentGroupId>50640292-015c-1000-0000-000000000000</parentGroupId>
       <position>
         <x>0.0</x>
-        <y>564.432166479126</y>
+        <y>564.4321664791261</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -1167,7 +1167,7 @@ if (flowFile != None):
       <parentGroupId>50640292-015c-1000-0000-000000000000</parentGroupId>
       <position>
         <x>288.16400445270165</x>
-        <y>778.4617160271919</y>
+        <y>778.461716027192</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -1186,7 +1186,7 @@ if (flowFile != None):
         <properties>
           <entry>
             <key>Delete Attributes Expression</key>
-            <value>RouteOnAttribute_Route</value>
+            <value>RouteOnAttribute.*</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -1247,7 +1247,7 @@ if (flowFile != None):
       <parentGroupId>50640292-015c-1000-0000-000000000000</parentGroupId>
       <position>
         <x>280.9483062105137</x>
-        <y>997.4586642693794</y>
+        <y>997.4586642693795</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -1378,5 +1378,5 @@ if (flowFile != None):
       <type>org.apache.nifi.processors.standard.ReplaceText</type>
     </processors>
   </snippet>
-  <timestamp>06/27/2017 16:21:09 UTC</timestamp>
+  <timestamp>06/29/2017 16:19:46 UTC</timestamp>
 </template>

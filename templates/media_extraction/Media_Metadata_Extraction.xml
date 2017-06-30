@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <template encoding-version="1.0">
-  <description></description>
+  <description>Extract metadata with/without content from media files</description>
   <groupId>50640292-015c-1000-29f0-0adcf8664f59</groupId>
-  <name>Media Ingest</name>
+  <name>Media Metadata Extraction</name>
   <snippet>
     <connections>
       <id>e5180065-015c-1000-0000-000000000000</id>
@@ -50,12 +50,12 @@
       <id>3d3a44be-7365-1c62-0000-000000000000</id>
       <parentGroupId>50640292-015c-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>1186.722181924402</x>
-        <y>20.63033001772402</y>
+        <x>1152.7685686431523</x>
+        <y>30.964009216942713</y>
       </position>
       <comments></comments>
       <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-      <name>to-ingest-media</name>
+      <name>to-input-media</name>
       <state>STOPPED</state>
       <transmitting>false</transmitting>
       <type>OUTPUT_PORT</type>
@@ -64,8 +64,8 @@
       <id>3d3a44ac-7365-1c62-0000-000000000000</id>
       <parentGroupId>50640292-015c-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>599.4758598502233</x>
-        <y>0.5087850713836701</y>
+        <x>565.5222465689731</x>
+        <y>10.842464270602477</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -268,7 +268,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>GetFile</name>
+      <name>Get media file</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>success</name>
@@ -277,5 +277,5 @@
       <type>org.apache.nifi.processors.standard.GetFile</type>
     </processors>
   </snippet>
-  <timestamp>06/26/2017 15:52:52 UTC</timestamp>
+  <timestamp>06/29/2017 10:00:52 UTC</timestamp>
 </template>
